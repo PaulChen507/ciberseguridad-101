@@ -1,4 +1,4 @@
-# Conceptos básicos de Seguridad Informática
+# Conceptos Básicos de Seguridad Informática
 
 **Objetivo:**
 
@@ -90,9 +90,6 @@ La ciberseguridad es un hábito diario. Con pequeños pasos puedes reducir enorm
 - INCIBE (Instituto Nacional de Ciberseguridad): Aula virtual con cursos gratuitos  
   [https://www.incibe.es/formacion](https://www.incibe.es/formacion)
 
-- MiriadaX: “Introducción a la Ciberseguridad” (MOOC en español)  
-  [https://miriadax.net](https://miriadax.net)
-
 #### 3. Listas de herramientas gratuitas
 
 - Revista Cloud: “20 herramientas gratis de ciberseguridad que debes conocer”  
@@ -117,8 +114,74 @@ La **CISA** (Cybersecurity and Infrastructure Security Agency) es una agencia of
 
 ### Referencias
 
-[CIS Controls v8 en español (PDF gratuito)](https://www.cisecurity.org/controls/cis-controls-download)  
+[CIS Controls )](https://www.cisecurity.org/insights/white-papers)  
 [CISA – Fundamentos de Ciberseguridad](https://www.cisa.gov/cybersecurity-awareness-program)
+
+## MITRE ATT&CK Framework
+
+El **MITRE ATT&CK Framework** (Adversarial Tactics, Techniques & Common Knowledge) es una base de conocimiento global que documenta las tácticas y técnicas utilizadas por los atacantes en el mundo real. Fue desarrollado por la organización sin fines de lucro **MITRE Corporation** y se ha convertido en un estándar para la **detección, análisis y respuesta ante amenazas cibernéticas**.
+
+### ¿Para qué sirve?
+
+- **Modelar el comportamiento del adversario**  
+  Permite entender cómo actúan los atacantes en cada fase del ciclo de vida del ataque.
+
+- **Mejorar la detección de amenazas**  
+  Ayuda a identificar técnicas específicas que pueden estar ocurriendo en el entorno.
+
+- **Fortalecer la respuesta a incidentes**  
+  Facilita la investigación post-compromiso y la identificación de brechas.
+
+- **Compartir inteligencia de amenazas**  
+  Establece un lenguaje común entre equipos de seguridad, proveedores y analistas.
+
+### ¿Cómo está estructurado?
+
+El framework se organiza en **matrices** que agrupan:
+
+- **Tácticas:** El objetivo del atacante (ej. acceso inicial, persistencia, evasión).
+- **Técnicas:** Cómo se logra ese objetivo (ej. phishing, ejecución remota).
+- **Subtécnicas:** Variaciones específicas de una técnica.
+- **Procedimientos:** Ejemplos reales de cómo se ha usado cada técnica.
+
+Puedes explorar la matriz completa en [MITRE ATT&CK Enterprise Matrix](https://attack.mitre.org/matrices/enterprise/)
+
+### ¿Cómo utilizarlo?
+
+1. **Mapeo de incidentes**  
+   Relaciona eventos detectados con tácticas y técnicas del framework.
+
+2. **Evaluación de cobertura de seguridad**  
+   Verifica qué técnicas están cubiertas por tus controles actuales.
+
+3. **Simulación de ataques (Purple Teaming)**  
+   Usa herramientas como Caldera o Atomic Red Team para emular técnicas del framework.
+
+4. **Caza de amenazas (Threat Hunting)**  
+   Diseña hipótesis basadas en técnicas comunes para buscar actividad maliciosa.
+
+5. **Educación y concienciación**  
+   Capacita a tu equipo usando ejemplos reales y taxonomías del framework.
+
+### Cómo aprovecharlo estratégicamente
+
+- **Integración con SIEM, XDR y SOAR**  
+  Muchos sistemas de seguridad ya incorporan MITRE ATT&CK para correlación de eventos.
+
+- **Priorización de riesgos**  
+  Identifica técnicas más utilizadas por grupos APT y enfoca tus defensas.
+
+- **Desarrollo de playbooks de respuesta**  
+  Crea guías específicas para responder a técnicas detectadas.
+
+- **Comparación con otros marcos**  
+  Úsalo junto a NIST, CIS Controls o Cyber Kill Chain para una defensa más completa.
+
+### Recursos en español
+
+- [¿Qué es el marco MITRE ATT&CK y cómo implementarlo? – Ciberseguridad.com](https://ciberseguridad.com/herramientas/marco-mitre-att-ck/)
+- [MITRE ATT&CK explicado por IBM](https://www.ibm.com/es-es/think/topics/mitre-attack)
+- [Glosario MITRE ATT&CK – Fortinet](https://www.fortinet.com/lat/resources/cyberglossary/mitre-attck)
 
 ## Gestión de Identidades y Accesos
 
@@ -155,14 +218,14 @@ El control de acceso define quién puede entrar, qué puede ver y qué puede hac
 
 ### Recursos
 
-- [CISA – Guía de ciberseguridad para pequeñas empresas](https://www.cisa.gov/sites/default/files/publications/CISA_Cyber_Essentials_Spanish.pdf)
+- [CISA – Guía de ciberseguridad para pequeñas empresas](https://www.cisa.gov/resources-tools/resources/cyber-essentials)
 - [OWASP – Guía de Autenticación Segura](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
 - [MITRE ATT&CK – T1078: Valid Accounts](https://attack.mitre.org/techniques/T1078/)
 - [MITRE ATT&CK – T1069: Discovery de Grupos y Permisos](https://attack.mitre.org/techniques/T1069/)
 - [MITRE ATT&CK – T1484: Modificación de Políticas de Dominio](https://attack.mitre.org/techniques/T1484/)
 - [CIS Controls – Control 5: Gestión de Cuentas](https://www.cisecurity.org/controls/account-management/)
 - [CIS Controls – Control 6: Gestión de Accesos](https://www.cisecurity.org/controls/access-control-management/)
-- [Microsoft – Mejores prácticas de seguridad en Active Directory](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/securing-active-directory)
+- [Microsoft – Mejores prácticas de seguridad en Active Directory](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/best-practices-for-securing-active-directory)
 - [PingCastle – Herramienta gratuita de evaluación de seguridad en AD](https://www.pingcastle.com/)
 - [Microsoft Entra ID – Guía para desarrolladores](https://learn.microsoft.com/en-us/entra/identity-platform/)
 
